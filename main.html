@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Condiment&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Homepage</h1>
+    </header>
+
+    <main>
+        <div class="serach-box">
+            <input type="text" id="search-input" placeholder="무엇을 하시겠습니까? (ex: To-do-list)">
+            <button id="search-button">검색</button>
+        </div>
+
+
+        <div class="icon-menu">
+            <div class="icon" data-link="todo.html">
+                <i class="fa-solid fa-pencil"></i>
+                <p id="icon-p">To-do-list</p>
+            </div>
+
+            <div class="icon" data-link="quotes.html">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <p id="icon-p">Today's Quotes</p>
+            </div>
+
+            <div class="icon" data-link="favorites.html">
+                <i class="fa-solid fa-house"></i>
+                <p id="icon-p">Another sites</p>
+
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

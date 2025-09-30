@@ -1,0 +1,87 @@
+body {
+    font-family:"Condiment", cursive;;
+    background-color:white;
+    text-align:center;
+    margin:0;
+}
+
+header {
+    background-color:rgb(114, 207, 131);
+    background: linear-gradient(45deg, rgb(252, 254, 252) #3be30d);
+    color: black;
+    font-size:24px;
+    padding: 20px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin:30px auto;
+}
+
+
+#search-input {
+    width:500px;
+    padding: 10px;
+    font-size:15px;
+    border:2px solid #2ecc71;
+    border-radius: 8px;
+    outline:none;
+    margin-top:40px;
+}
+
+#search-button {
+    padding: 10px 15px;
+    font-size:15px;
+    border:none;
+    background:#2ecc71;
+    color:white;
+    border-radius:8px;
+    cursor:pointer; /*이거 마우스 포인터 올렸을 때 포인터 모양 바꿔줌.ㅇㅇ*/
+}
+
+#search-button:hover { /*가상 클래스 찍먹 해보기*/
+    background:#27ae60;
+}
+/*a:hover {
+    color:red; 링크 위에 마우스 올리면 빨간색
+}
+
+img:hover {
+    transform: scale(1.1); 마우스 올리면 이미지 1.1배 확대
+}
+
+.icon:hover {
+    opacity:0.7 아이콘 위에 올리면 살짝 투명해짐
+}*/
+
+.icon-menu {
+    display:flex;
+    justify-content:center;
+    gap: 80px;
+    margin-top:80px;
+}
+
+
+.icon {
+    width:120px;
+    cursor: pointer;
+}
+
+.icon i {
+    font-size: 40px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.icon:hover i {
+    color:#27ae60;
+    transform: scale(1.2);
+}
+
+.icon-p{
+    margin-top:10px;
+    font-weight:bold;
+    color:#333;
+}
