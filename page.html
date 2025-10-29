@@ -3,22 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login_page</title>
+    <title>Login-page</title>
     <link rel="stylesheet" href="css/page.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Condiment&display=swap');
     </style>
 </head>
 <body>
-    <main id="main_box">
-        <h1 id="h1_holder">WELCOME</h1>
+  <div id="container">
+    <div id="image-box">
+        <img src="images/Loginpagebackgroundimage.jpeg" alt="login illustration">
+    </div>
+    <main id="main-box">
+        <h1 id="h1-holder">WELCOME</h1>
         <form id="login-form">
-            <label>ID<input type="text" name="username" id="user-id" autofocus placeholder="ID" ></label>
-            <label>PW<input type="password" name="userpassword" id="user-password" placeholder="PW"></label>
-            <button type="submit" id="login_button">Login</button>
+            <label>ID<input type="text" name="username" id="user-id" autofocus placeholder="ID" required></label>
+            <label>PW<input type="password" name="userpassword" id="user-password" placeholder="PassWord" required></label>
+            <span id="alarm"></span>
+            <button type="submit" id="login-button">Login</button>
         </form>
     </main>
+   </div>
 
-    <script src="js/page.js"></script>
+   <!-- form 안에 있는 button의 타입이 submit이어서 로그인 버튼을 누르거나 엔터를 누르면 새로고침되는 문제가 발생
+ 문제 해결 방법
+ 1. 버튼의 타입을 submit에서 button으로 변경.(가장 기본적인 방법)
+ <button id="login_button" type="button">로그인</button>
+ 
+ 
+ 
+ 2. form의 submit 이벤트를 직접 제어하기(정석적인 방법)
+ 이거 사용해보자.
+ 
+ 
+ 3. input에서 Enter 입력을 따로 처리한다
+ PwInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault(); //  엔터 새로고침 방지
+    handleClick(event);
+  }
+});).-->
+
+
+<script src="js/page.js"></script>
 </body>
 </html>
