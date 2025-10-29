@@ -1,32 +1,35 @@
 const form = document.querySelector("form");
-const subject = document.querySelector("#subject");
-const itemList = document.querySelector("#itemList");
+const todoInput = document.querySelector("#subject");
+const addButton = document.querySelector("#btn");
+const todos = document.querySelector("#itemList");
 
-form.addEventListener("submit", event => {
-    event.preventDefault();
-    newRegister();
-});
-
-itemList.addEventListener("click", (event) => {
-    if(event.target.tagName === "LI") {
-        if(confirm("이 항목을 삭제하시겠습니까?")) {
-            event.target.remove();
-        }
-    }
-});
-
-function newRegister() {
-    const newItem = document.createElement("li");
-    const subject = document.querySelector("#subject");
-    const newText = document.createTextNode(subject.value);
-
-    newItem.appendChild(newText);
-    itemList.appendChild(newItem);
-
-    subject.value="";
-    subject.focus();
-
+function deleteTodo(event){
+    const li = event.target.parentElement;
+    li.remove();
 }
 
+
+function handleSubject(event){
+    event.preventDefault();
+    const newToDo = todoInput.value;
+    todoInput.value="";
+    showTodo(newToDo);
+}
+
+function showTodo(newToDo){
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    span.innerText = newToDo;
+    const button = document.createElement("button");
+    button.innerText = "❌";
+    li.appendChild(span);
+    li.appendChild(button);
+    todos.appendChild(li);
+    button.addEventListener("click",deleteTodo);
+}
+
+form.addEventListener("submit",handleSubject);
+
+//새로 고침하면 할 일들이 없어지는 문제 발생
 
 
