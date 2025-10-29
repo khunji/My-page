@@ -4,38 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Today's quotes</title>
-    <style>
-        body {
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background: #f9f9f9;
-        }
-
-        .quote-container {
-            text-align:center;
-        }
-
-        img {
-            max-width: 600px;
-            width:80%;
-            border-radius: 12px;
-        }
-    </style>
+    <link rel="Stylesheet" href="css/quotes.css">
 </head>
 <body>
     <div class="quote-container">
-        <img id="quoteImage" alt="랜덤 명언 이미지">
+        <img id="quoteImage" alt="축구 선수 랜덤 명언 이미지">
     </div>
-
-
-    <script>
-        const images = ["images/Messi.png","images/Ronaldo.png","images/Cannavaro.png","images/Casillas.png","images/DelPiero.png"];
-        const randomnum = Math.floor(Math.random()*images.length);
-        const selectedImage = images[randomnum];
-
-        document.querySelector("#quoteImage").src = selectedImage;
-    </script>
+    <script src="js/quotes.js"></script>
 </body>
 </html>
 
