@@ -1,0 +1,16 @@
+body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: #f9f9f9;
+}
+
+.quote-container {
+    text-align:center;
+}
+
+img {
+    max-width: 600px;
+    width:80%;
+    border-radius: 12px;
+}

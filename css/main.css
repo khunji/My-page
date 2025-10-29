@@ -1,7 +1,6 @@
 body {
     font-family:"Condiment", cursive;;
     background-color:white;
-    text-align:center;
     margin:0;
 }
 
@@ -13,9 +12,23 @@ header {
     padding: 20px;
 }
 
+#title {
+    text-align: center;
+}
+
+#clock {
+    text-align:center;
+}
+
+#weather{
+    display:flex;
+    justify-content:flex-end;
+}
+
 .search-box {
-  display: flex;
-  justify-content: center;
+  display: flex;/*가로 방향*/
+  justify-content: center;/*가로축 가운데 정렬*/
+  align-items:stretch; /*세로축 세로 높이 맞추기*/
   gap: 10px;
   margin:30px auto;
 }
@@ -28,11 +41,10 @@ header {
     border:2px solid #2ecc71;
     border-radius: 8px;
     outline:none;
-    margin-top:40px;
 }
 
 #search-button {
-    padding: 10px 15px;
+    padding: 0 20px;
     font-size:15px;
     border:none;
     background:#2ecc71;
@@ -57,31 +69,84 @@ img:hover {
 }*/
 
 .icon-menu {
-    display:flex;
-    justify-content:center;
+    display:flex;/*가로로 나란히 배치*/
+    justify-content:center;/*세 아이콘을 가운데 정렬*/
     gap: 80px;
     margin-top:80px;
 }
 
 
-.icon {
+.icon1 {
     width:120px;
     cursor: pointer;
 }
-
-.icon i {
+.icon1 i {
     font-size: 40px;
     color: black;
     margin-bottom: 10px;
 }
-
-.icon:hover i {
+.icon1:hover i {
     color:#27ae60;
     transform: scale(1.2);
 }
-
-.icon-p{
+.icon1-p{
     margin-top:10px;
     font-weight:bold;
     color:#333;
 }
+
+.icon2 {
+    width:120px;
+    cursor: pointer;
+}
+.icon2 i {
+    font-size: 40px;
+    color: black;
+    margin-bottom: 10px;
+}
+.icon2:hover i {
+    color:#27ae60;
+    transform: scale(1.2);
+}
+.icon2-p{
+    margin-top:10px;
+    font-weight:bold;
+    color:#333;
+}
+
+.icon3 {
+    width:120px;
+    cursor: pointer;
+}
+.icon3 i {
+    font-size: 40px;
+    color: black;
+    margin-bottom: 10px;
+}
+.icon3:hover i {
+    color:#27ae60;
+    transform: scale(1.2);
+}
+.icon3-p{
+    margin-top:10px;
+    font-weight:bold;
+    color:#333;
+}
+
+
+/*
+| 속성                | 역할       | `row` (기본)일 때 | `column`일 때 |
+| ----------------- | -------- | ------------- | ----------- |
+| `flex-direction`  | 주축 방향 설정 | 가로로 나열        | 세로로 쌓기      |
+| `justify-content` | 주축 정렬    | 가로 정렬         | 세로 정렬       |
+| `align-items`     | 교차축 정렬   | 세로 정렬         | 가로 정렬       |
+*/
+
+
+/*
+text-align은 텍스트나 inline 요소(예: <span>, <a>, <img>)에만 적용됨.
+
+블록 요소 <p> 자체를 가운데로 옮기진 않음.
+
+즉, 글자 정렬용.
+*/
