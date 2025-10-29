@@ -12,30 +12,34 @@
 </head>
 <body>
     <header>
-        <h1>My Homepage</h1>
+        <h1 id="title">My Homepage</h1>
+        <p id="clock"></p>
+        <div id="weather">
+            <p></p>
+            <p></p>
+        </div>
     </header>
 
     <main>
-        <div class="serach-box">
+        <div class="search-box">
             <input type="text" id="search-input" placeholder="무엇을 하시겠습니까? (ex: To-do-list)">
             <button id="search-button">검색</button>
         </div>
 
-
         <div class="icon-menu">
-            <div class="icon" data-link="todo.html">
+            <div class="icon1"> 
                 <i class="fa-solid fa-pencil"></i>
-                <p id="icon-p">To-do-list</p>
+                <p id="icon1-p">To-do-list</p>
             </div>
 
-            <div class="icon" data-link="quotes.html">
+            <div class="icon2">
                 <i class="fa-solid fa-book-open-reader"></i>
-                <p id="icon-p">Today's Quotes</p>
+                <p id="icon2-p">Today's Quotes</p>
             </div>
 
-            <div class="icon" data-link="favorites.html">
+            <div class="icon3">
                 <i class="fa-solid fa-house"></i>
-                <p id="icon-p">Another sites</p>
+                <p id="icon3-p">Another sites</p>
 
             </div>
         </div>
@@ -43,3 +47,6 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+<!-- <p>-문단을 나타낼 때 사용, 디스플레이:display: block, 항상 한 줄 전체를 차지함, 위아래 기본 여백 있음, 다른 블록 요소와 겹치지 않고 세로로 쌓임-->
+<!--<span>인라인 문장 내에서 일부 텍스트를 스타일링할 때 사용. 디스플레이:display: inline  -->
